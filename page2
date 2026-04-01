@@ -13,7 +13,7 @@
   console.log(a); // 닉네임
 </script>
 
- <h1></h1>
+     alert(a + "님, 옮겨졋긔");
 
   <!-- 입력창 -->
   <input 
