@@ -1,12 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Portfolio</title>
-</head>
-<body>
-  <p>Hello, World!</p>
+ <head>
+      <title> 미궁 게임 </title>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" href="./style.css">
+      <script type="text/javascript" src="./script.js"></script> 
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+  </head>
+
+ <h1>이름을 입력하세요</h1>
+
+  <!-- 입력창 -->
+  <input 
+    type="text" 
+    id="nameInput" 
+    placeholder="이름 입력"
+    style="padding:10px; font-size:16px;"
+  >
+
+  <br><br>
+
+  <!-- 버튼 -->
+  <button onclick="saveName()" style="padding:10px 20px; font-size:16px;">
+    확인
+  </button>
+
+  <script>
+    let a = ""; // 이름 저장 변수
+
+    function saveName() {
+      a = document.getElementById("nameInput").value;
+      console.log("저장된 이름:", a);
+
+      alert(a + "님, 저장되었습니다!");
+    }
+  </script>
+
 </body>
-</html>
