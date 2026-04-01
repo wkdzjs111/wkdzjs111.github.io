@@ -6,14 +6,6 @@
       <link rel="preconnect" href="https://fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
   </head>
-  
-<script>
-  const params = new URLSearchParams(window.location.search);
-  const a = params.get("a");
-  console.log(a); // 닉네임
-</script>
-
-     alert(a + "님, 옮겨졋긔");
 
   <!-- 입력창 -->
   <input 
