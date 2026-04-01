@@ -11,7 +11,6 @@
   document.getElementById("text").innerText = a + "님 루시 아일랜드의 티켓을 구하러 가시겠습니까?";
 </script>
 
- <button onclick="alert('출발!')">예</button>
-<button onclick="alert('취소')">아니오</button>
-
+ <button onclick="alert('출발!')"></button>
+<script>   location.href = "page3.html?a=" + encodeURIComponent(a); </script>
 </body>
