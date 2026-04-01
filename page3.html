@@ -29,12 +29,10 @@ function checkAnswer() {
     const userAnswer = document.getElementById("answer").value;
 
     if (userAnswer === "INTRO") {
-      alert("정답입니다!");
-      //location.href = "page4.html";
+     location.href = "page4.html?a=" + encodeURIComponent(a);
     } else {
       alert("틀렸습니다!");
     }
   }
-
-//  location.href = "page3.html?a=" + encodeURIComponent(a); </script>
+  </script>
 </body>
