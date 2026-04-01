@@ -1,25 +1,48 @@
 <!DOCTYPE html>
-<html> 
+<html>
 <head>
-      <title> 미궁 게임 </title>
-      <meta charset="UTF-8">
-      <link rel="stylesheet" href="./style.css">
-      <script type="text/javascript" src="./script.js"></script> 
-      <link rel="preconnect" href="https://fonts.gstatic.com">
-      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
-  </head>
-<h1 id="text"></h1>
-<script> const params = new URLSearchParams(window.location.search); const a = params.get("a"); console.log("받은 이름:", a); 
-  document.getElementById("text").innerText = a + "님 루시 아일랜드의 티켓을 구하러 가시겠습니까?";
+  <title>미궁 게임</title>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const a = params.get("a");
 </script>
 
-<button onclick="goNext()" style="padding:10px 20px;">
-  출발!
-</button>
+<!-- 부모 (기준) -->
+<div style="position: relative; width:100%; max-width:600px;">
 
-<script>   function goNext() {
+  <!-- 이미지 -->
+  <img src="https://github.com/wkdzjs111/wkdzjs111.github.io/blob/main/image1.jpg?raw=true"
+       style="width:100%; display:block;">
+
+  <!-- 정중앙 클릭 영역 -->
+  <div onclick="goNext()"
+       style="
+         position:absolute;
+         top:50%;
+         left:50%;
+         transform:translate(-50%, -50%);
+         width:80px;
+         height:80px;
+         cursor:pointer;
+       ">
+  </div>
+
+</div>
+
+<h1>
+루시아일랜드는 현실과 이상, 과거와 현재 그 모든것의 '연결성'을 중요시합니다.
+</h1>
+
+<script>
+function goNext() {
   location.href = "page3.html?a=" + encodeURIComponent(a);
-} </script>
-</body>
+}
+</script>
+
 </body>
 </html>
