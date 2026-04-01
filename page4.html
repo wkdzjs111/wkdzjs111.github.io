@@ -1,18 +1,23 @@
 <!DOCTYPE html>
-<html> 
+<html>
 <head>
-      <title> 미궁 게임 </title>
-      <meta charset="UTF-8">
-      <link rel="stylesheet" href="./style.css">
-      <script type="text/javascript" src="./script.js"></script> 
-      <link rel="preconnect" href="https://fonts.gstatic.com">
-      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
-  </head>
+  <title>미궁 게임</title>
+  <meta charset="UTF-8">
+</head>
 
-  <script> const params = new URLSearchParams(window.location.search); const a = params.get("a"); console.log("받은 이름:", a); 
+<body>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const a = params.get("a");
 </script>
 
- <img src='https://github.com/wkdzjs111/wkdzjs111.github.io/blob/main/image1.jpg?raw=true' style="width:100%; display:block;">
+<!-- 부모 (기준) -->
+<div style="position: relative; width:100%; max-width:600px;">
+
+  <!-- 이미지 -->
+  <img src="https://github.com/wkdzjs111/wkdzjs111.github.io/blob/main/image1.jpg?raw=true"
+       style="width:100%; display:block;">
 
   <!-- 정중앙 클릭 영역 -->
   <div onclick="goNext()"
@@ -29,14 +34,15 @@
 
 </div>
 
-</script>
- <h1>  루시아일랜드는 현실과 이상, 과거와 현재 그 모든것의 '연결성'을 중요시합니다 .</h1>
+<h1>
+루시아일랜드는 현실과 이상, 과거와 현재 그 모든것의 '연결성'을 중요시합니다.
+</h1>
 
 <script>
 function goNext() {
-     location.href = "page5.html?a=" + encodeURIComponent(a);
+  location.href = "page5.html?a=" + encodeURIComponent(a);
 }
 </script>
-</body>
+
 </body>
 </html>
