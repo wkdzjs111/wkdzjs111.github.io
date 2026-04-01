@@ -1,4 +1,7 @@
- <head>
+
+<!DOCTYPE html>
+<html> 
+<head>
       <title> 미궁 게임 </title>
       <meta charset="UTF-8">
       <link rel="stylesheet" href="./style.css">
@@ -8,31 +11,16 @@
   </head>
 <h1 id="text"></h1>
 <script> const params = new URLSearchParams(window.location.search); const a = params.get("a"); console.log("받은 이름:", a); 
+  document.getElementById("text").innerText = a + "님 루시 아일랜드의 티켓을 구하러 가시겠습니까?";
 </script>
 
-<p>
-티켓은 누구나 가질 수 없습니다.<br>
-같은 소리를 들은 자만이 얻을 수 있습니다.<br>
-출발하기 위한 소리를 입력하세요.
-</p>
-
-<!-- 정답 입력 -->
-<input type="text" id="answer" placeholder="정답 입력" style="padding:10px;">
-
-<!-- 제출 버튼 -->
-<button onclick="checkAnswer()" style="padding:10px 20px;">
-  정답 제출
+<button onclick="goNext()" style="padding:10px 20px;">
+  출발!
 </button>
 
-<script> 
-function checkAnswer() {
-    const userAnswer = document.getElementById("answer").value;
-
-    if (userAnswer === "INTRO") {
-     location.href = "page4.html?a=" + encodeURIComponent(a);
-    } else {
-      alert("틀렸습니다!");
-    }
-  }
-  </script>
+<script>   function goNext() {
+  location.href = "page4.html?a=" + encodeURIComponent(a);
+} </script>
 </body>
+</body>
+</html>
