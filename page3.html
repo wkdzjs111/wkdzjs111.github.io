@@ -1,0 +1,40 @@
+ <head>
+      <title> 미궁 게임 </title>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" href="./style.css">
+      <script type="text/javascript" src="./script.js"></script> 
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+  </head>
+<h1 id="text"></h1>
+<script> const params = new URLSearchParams(window.location.search); const a = params.get("a"); console.log("받은 이름:", a); 
+</script>
+
+<p>
+티켓은 누구나 가질 수 없습니다.<br>
+같은 소리를 들은 자만이 얻을 수 있습니다.<br>
+출발할 준비가 되어 있으신가요?
+</p>
+
+<!-- 정답 입력 -->
+<input type="text" id="answer" placeholder="정답 입력" style="padding:10px;">
+
+<!-- 제출 버튼 -->
+<button onclick="checkAnswer()" style="padding:10px 20px;">
+  정답 제출
+</button>
+
+<script> 
+function checkAnswer() {
+    const userAnswer = document.getElementById("answer").value;
+
+    if (userAnswer === "INTRO") {
+      alert("정답입니다!");
+      //location.href = "page4.html";
+    } else {
+      alert("틀렸습니다!");
+    }
+  }
+
+//  location.href = "page3.html?a=" + encodeURIComponent(a); </script>
+</body>
