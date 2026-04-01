@@ -1,4 +1,6 @@
- <head>
+<!DOCTYPE html>
+<html> 
+<head>
       <title> 미궁 게임 </title>
       <meta charset="UTF-8">
       <link rel="stylesheet" href="./style.css">
@@ -11,6 +13,13 @@
   document.getElementById("text").innerText = a + "님 루시 아일랜드의 티켓을 구하러 가시겠습니까?";
 </script>
 
- <button onclick="alert('출발!')"></button>
-<script>   location.href = "page3.html?a=" + encodeURIComponent(a); </script>
+<button onclick="goNext()" style="padding:10px 20px;">
+  출발!
+</button>
+
+<script>   function goNext() {
+  location.href = "page3.html?a=" + encodeURIComponent(a);
+} </script>
 </body>
+</body>
+</html>
