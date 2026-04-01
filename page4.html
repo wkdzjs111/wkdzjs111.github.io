@@ -12,20 +12,31 @@
   <script> const params = new URLSearchParams(window.location.search); const a = params.get("a"); console.log("받은 이름:", a); 
 </script>
 
-  <img src= 'https://github.com/wkdzjs111/wkdzjs111.github.io/blob/main/image1.jpg?raw=true' id="img">
+ <img src='https://github.com/wkdzjs111/wkdzjs111.github.io/blob/main/image1.jpg?raw=true' style="width:100%; display:block;">
 
-<script>
-document.getElementById("img").onclick = function(e) {
-  const x = e.offsetX;
-  const y = e.offsetY;
+  <!-- 정중앙 클릭 영역 -->
+  <div onclick="goNext()"
+       style="
+         position:absolute;
+         top:50%;
+         left:50%;
+         transform:translate(-50%, -50%);
+         width:80px;
+         height:80px;
+         cursor:pointer;
+       ">
+  </div>
 
-  if (x > 100 && x < 200 && y > 100 && y < 200) {
-    location.href = "page5.html?a=" + encodeURIComponent(a);
-  }
-}
+</div>
+
 </script>
  <h1>  루시아일랜드는 현실과 이상, 과거와 현재 그 모든것의 '연결성'을 중요시합니다 .</h1>
 
+<script>
+function goNext() {
+     location.href = "page2.html?a=" + encodeURIComponent(a);
+}
+</script>
 </body>
 </body>
 </html>
